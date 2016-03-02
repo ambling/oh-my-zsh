@@ -6,17 +6,16 @@
 # Direct Link: https://github.com/andyfleming/oh-my-zsh/blob/master/themes/af-magic.zsh-theme
 #
 # Created on:		June 19, 2012
-# Last modified on:	June 20, 2012
+# Last modified on:	March 02, 2016
 
 
 
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+local return_code="%(?..%{$fg[red]%}%? %{$reset_color%})"
 
 # primary prompt
-PROMPT='$FG[237]------------------------------------------------------------%{$reset_color%}
-$FG[032]%3~\
-$FG[105]%(!.#.»)%{$reset_color%} '
+PROMPT='$FG[237]--------------------------------------------------------------------------------%{$reset_color%}
+$FG[032]%3~$FG[105] %(!.#.$)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 RPS1='${return_code}'
 
